@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable
+// @IBDesignable
 final class FooterView: UIView {
     
     // MARK: - Outlets
@@ -50,8 +50,6 @@ final class FooterView: UIView {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"
         let formattedDate = dateFormatter.string(from: Date())
-        
-        dateFormatter.timeStyle = .medium
         DateContentLabel.text = formattedDate
         
     }

@@ -312,6 +312,7 @@ extension UILabel {
         self.numberOfLines = 0
         self.adjustsFontSizeToFitWidth = true
         self.minimumScaleFactor = 0.5
+        
      }
     
     /// Underline Text

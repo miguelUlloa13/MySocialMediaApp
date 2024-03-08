@@ -22,6 +22,8 @@
 		78DB27552B9AA8B100B5373F /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DB27542B9AA8B100B5373F /* FooterView.xib */; };
 		78DB275B2B9AD75800B5373F /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DB275A2B9AD75800B5373F /* HeaderView.xib */; };
 		78DB275F2B9ADCAB00B5373F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB275E2B9ADCAB00B5373F /* HeaderView.swift */; };
+		78DB27622B9B61CB00B5373F /* RegistrationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27602B9B61CB00B5373F /* RegistrationTableViewCell.swift */; };
+		78DB27632B9B61CB00B5373F /* RegistrationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DB27612B9B61CB00B5373F /* RegistrationTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		78DB27542B9AA8B100B5373F /* FooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
 		78DB275A2B9AD75800B5373F /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		78DB275E2B9ADCAB00B5373F /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		78DB27602B9B61CB00B5373F /* RegistrationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewCell.swift; sourceTree = "<group>"; };
+		78DB27612B9B61CB00B5373F /* RegistrationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 				78DB272C2B9A36DC00B5373F /* Main.storyboard */,
 				78DB27432B9A847000B5373F /* UsersViewController.xib */,
 				78DB27472B9A85A600B5373F /* EditRegistrationViewController.xib */,
+				78DB27612B9B61CB00B5373F /* RegistrationTableViewCell.xib */,
 				78DB275A2B9AD75800B5373F /* HeaderView.xib */,
 				78DB27542B9AA8B100B5373F /* FooterView.xib */,
 			);
@@ -112,6 +117,7 @@
 				78DB273E2B9A446000B5373F /* LoginViewController.swift */,
 				78DB27422B9A847000B5373F /* UsersViewController.swift */,
 				78DB27462B9A85A600B5373F /* EditRegistrationViewController.swift */,
+				78DB27602B9B61CB00B5373F /* RegistrationTableViewCell.swift */,
 				78DB275E2B9ADCAB00B5373F /* HeaderView.swift */,
 				78DB27522B9AA68B00B5373F /* FooterView.swift */,
 			);
@@ -188,6 +194,7 @@
 				78DB27492B9A85A600B5373F /* EditRegistrationViewController.xib in Resources */,
 				78DB27302B9A36DE00B5373F /* Assets.xcassets in Resources */,
 				78DB27452B9A847000B5373F /* UsersViewController.xib in Resources */,
+				78DB27632B9B61CB00B5373F /* RegistrationTableViewCell.xib in Resources */,
 				78DB27332B9A36DE00B5373F /* Base in Resources */,
 				78DB272E2B9A36DC00B5373F /* Base in Resources */,
 				78DB275B2B9AD75800B5373F /* HeaderView.xib in Resources */,
@@ -208,6 +215,7 @@
 				78DB27532B9AA68B00B5373F /* FooterView.swift in Sources */,
 				78DB27292B9A36DC00B5373F /* SceneDelegate.swift in Sources */,
 				78DB27412B9A77DB00B5373F /* Extension.swift in Sources */,
+				78DB27622B9B61CB00B5373F /* RegistrationTableViewCell.swift in Sources */,
 				78DB275F2B9ADCAB00B5373F /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

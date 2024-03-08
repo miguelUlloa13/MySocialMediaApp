@@ -7,7 +7,7 @@
 
 import UIKit
 
-@IBDesignable
+// @IBDesignable
 final class HeaderView: UIView {
 
     // MARK: - Properties
@@ -43,9 +43,9 @@ final class HeaderView: UIView {
     private func customLabels() {
 
         AppNameLabel.text = "MySocialMediaApp"
-        AppNameLabel.myCustomFont(size: 30, textColor: .label, textAlignment: .right)
+        AppNameLabel.myCustomFont(size: 30, textColor: .green, textAlignment: .right)
         
-        UsernameLabel.text = "Admin"
+        UsernameLabel.text = "User: Admin"
         UsernameLabel.myCustomFont(size: 20, textColor: .label)
        
     }
