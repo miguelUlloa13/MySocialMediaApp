@@ -67,5 +67,11 @@ class LoginViewController: UIViewController {
         PasswordTextField.placeholder = "Password"
         PasswordTextField.font = UIFont(name: UIFont.nameOf.Futura_Medium.rawValue, size: 20)
     }
-
+    
+    
+    @IBAction func LoginButtonTapped(_ sender: Any) {
+        let usersVC = UsersViewController()
+        self.navigationController?.pushViewController(usersVC, animated: true)
+    }
+    
 }

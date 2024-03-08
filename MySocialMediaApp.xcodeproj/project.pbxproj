@@ -14,6 +14,14 @@
 		78DB27332B9A36DE00B5373F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 78DB27322B9A36DE00B5373F /* Base */; };
 		78DB273F2B9A446000B5373F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB273E2B9A446000B5373F /* LoginViewController.swift */; };
 		78DB27412B9A77DB00B5373F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27402B9A77DB00B5373F /* Extension.swift */; };
+		78DB27442B9A847000B5373F /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27422B9A847000B5373F /* UsersViewController.swift */; };
+		78DB27452B9A847000B5373F /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DB27432B9A847000B5373F /* UsersViewController.xib */; };
+		78DB27482B9A85A600B5373F /* EditRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27462B9A85A600B5373F /* EditRegistrationViewController.swift */; };
+		78DB27492B9A85A600B5373F /* EditRegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DB27472B9A85A600B5373F /* EditRegistrationViewController.xib */; };
+		78DB274C2B9A9ADA00B5373F /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB274A2B9A9ADA00B5373F /* HeaderViewController.swift */; };
+		78DB274D2B9A9ADA00B5373F /* HeaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DB274B2B9A9ADA00B5373F /* HeaderViewController.xib */; };
+		78DB27532B9AA68B00B5373F /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27522B9AA68B00B5373F /* FooterView.swift */; };
+		78DB27552B9AA8B100B5373F /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DB27542B9AA8B100B5373F /* FooterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,14 @@
 		78DB27342B9A36DE00B5373F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78DB273E2B9A446000B5373F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		78DB27402B9A77DB00B5373F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		78DB27422B9A847000B5373F /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		78DB27432B9A847000B5373F /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
+		78DB27462B9A85A600B5373F /* EditRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRegistrationViewController.swift; sourceTree = "<group>"; };
+		78DB27472B9A85A600B5373F /* EditRegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditRegistrationViewController.xib; sourceTree = "<group>"; };
+		78DB274A2B9A9ADA00B5373F /* HeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
+		78DB274B2B9A9ADA00B5373F /* HeaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderViewController.xib; sourceTree = "<group>"; };
+		78DB27522B9AA68B00B5373F /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		78DB27542B9AA8B100B5373F /* FooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +98,10 @@
 			children = (
 				78DB27312B9A36DE00B5373F /* LaunchScreen.storyboard */,
 				78DB272C2B9A36DC00B5373F /* Main.storyboard */,
+				78DB27432B9A847000B5373F /* UsersViewController.xib */,
+				78DB27472B9A85A600B5373F /* EditRegistrationViewController.xib */,
+				78DB274B2B9A9ADA00B5373F /* HeaderViewController.xib */,
+				78DB27542B9AA8B100B5373F /* FooterView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -90,6 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				78DB273E2B9A446000B5373F /* LoginViewController.swift */,
+				78DB27422B9A847000B5373F /* UsersViewController.swift */,
+				78DB27462B9A85A600B5373F /* EditRegistrationViewController.swift */,
+				78DB274A2B9A9ADA00B5373F /* HeaderViewController.swift */,
+				78DB27522B9AA68B00B5373F /* FooterView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -160,7 +184,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78DB27552B9AA8B100B5373F /* FooterView.xib in Resources */,
+				78DB27492B9A85A600B5373F /* EditRegistrationViewController.xib in Resources */,
+				78DB274D2B9A9ADA00B5373F /* HeaderViewController.xib in Resources */,
 				78DB27302B9A36DE00B5373F /* Assets.xcassets in Resources */,
+				78DB27452B9A847000B5373F /* UsersViewController.xib in Resources */,
 				78DB27332B9A36DE00B5373F /* Base in Resources */,
 				78DB272E2B9A36DC00B5373F /* Base in Resources */,
 			);
@@ -174,7 +202,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				78DB273F2B9A446000B5373F /* LoginViewController.swift in Sources */,
+				78DB274C2B9A9ADA00B5373F /* HeaderViewController.swift in Sources */,
+				78DB27482B9A85A600B5373F /* EditRegistrationViewController.swift in Sources */,
 				78DB27272B9A36DC00B5373F /* AppDelegate.swift in Sources */,
+				78DB27442B9A847000B5373F /* UsersViewController.swift in Sources */,
+				78DB27532B9AA68B00B5373F /* FooterView.swift in Sources */,
 				78DB27292B9A36DC00B5373F /* SceneDelegate.swift in Sources */,
 				78DB27412B9A77DB00B5373F /* Extension.swift in Sources */,
 			);

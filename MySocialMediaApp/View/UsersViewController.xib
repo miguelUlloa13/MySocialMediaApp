@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UsersViewController" customModule="MySocialMediaApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MTo-Ig-bBv">
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMf-lh-aZh">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="Q41-I6-ZJP"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXB-9g-6sX">
+                            <rect key="frame" x="0.0" y="100" width="393" height="593"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fM2-lr-V8I" customClass="FooterView" customModule="MySocialMediaApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="693" width="393" height="100"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="0wj-24-l12"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="fM2-lr-V8I" secondAttribute="bottom" id="C6N-1J-L8o"/>
+                        <constraint firstAttribute="trailing" secondItem="fM2-lr-V8I" secondAttribute="trailing" id="W8v-6p-i7F"/>
+                        <constraint firstItem="fM2-lr-V8I" firstAttribute="leading" secondItem="MTo-Ig-bBv" secondAttribute="leading" id="cXS-ky-Wx9"/>
+                        <constraint firstItem="UMf-lh-aZh" firstAttribute="top" secondItem="MTo-Ig-bBv" secondAttribute="top" id="pCA-tO-FLx"/>
+                        <constraint firstItem="UMf-lh-aZh" firstAttribute="leading" secondItem="MTo-Ig-bBv" secondAttribute="leading" id="q2R-gp-XKU"/>
+                        <constraint firstAttribute="trailing" secondItem="UMf-lh-aZh" secondAttribute="trailing" id="rIG-rM-zHo"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="AccentColor"/>
+            <constraints>
+                <constraint firstItem="MTo-Ig-bBv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2It-Uc-qWm"/>
+                <constraint firstAttribute="bottom" secondItem="MTo-Ig-bBv" secondAttribute="bottom" id="Hj4-uB-wgd"/>
+                <constraint firstItem="MTo-Ig-bBv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Rve-Qx-D2f"/>
+                <constraint firstItem="MTo-Ig-bBv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SgC-oq-71L"/>
+            </constraints>
+            <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.99607843137254903" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
