@@ -20,45 +20,73 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MTo-Ig-bBv">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NyR-SO-S5f">
                     <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMf-lh-aZh">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
-                            <color key="backgroundColor" systemColor="systemRedColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="100" id="Q41-I6-ZJP"/>
-                            </constraints>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXB-9g-6sX">
-                            <rect key="frame" x="0.0" y="100" width="393" height="593"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fM2-lr-V8I" customClass="FooterView" customModule="MySocialMediaApp" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="693" width="393" height="100"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtz-LK-Nip">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="500"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wB9-4g-5Km">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="500"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kfh-u6-hyP" customClass="HeaderView" customModule="MySocialMediaApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="V8N-xj-SPw"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yhj-qH-09S">
+                                            <rect key="frame" x="0.0" y="200" width="393" height="200"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="oui-J7-43o"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JKA-zc-xqZ" customClass="FooterView" customModule="MySocialMediaApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="400" width="393" height="100"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="TeQ-Ur-5zm"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="JKA-zc-xqZ" firstAttribute="leading" secondItem="wB9-4g-5Km" secondAttribute="leading" id="Pek-L5-4NO"/>
+                                        <constraint firstAttribute="trailing" secondItem="kfh-u6-hyP" secondAttribute="trailing" id="VpK-a2-Lgm"/>
+                                        <constraint firstAttribute="trailing" secondItem="JKA-zc-xqZ" secondAttribute="trailing" id="Wew-a5-RL4"/>
+                                        <constraint firstItem="kfh-u6-hyP" firstAttribute="leading" secondItem="wB9-4g-5Km" secondAttribute="leading" id="aN4-CR-Wb0"/>
+                                        <constraint firstAttribute="bottom" secondItem="JKA-zc-xqZ" secondAttribute="bottom" id="bbS-CN-yyF"/>
+                                        <constraint firstItem="kfh-u6-hyP" firstAttribute="top" secondItem="wB9-4g-5Km" secondAttribute="top" id="zmf-CI-zSI"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="100" id="0wj-24-l12"/>
+                                <constraint firstAttribute="bottom" secondItem="wB9-4g-5Km" secondAttribute="bottom" id="5iY-vI-J1L"/>
+                                <constraint firstItem="wB9-4g-5Km" firstAttribute="leading" secondItem="vtz-LK-Nip" secondAttribute="leading" id="RbB-41-hWk"/>
+                                <constraint firstItem="wB9-4g-5Km" firstAttribute="top" secondItem="vtz-LK-Nip" secondAttribute="top" id="cj4-9f-wdd"/>
+                                <constraint firstAttribute="trailing" secondItem="wB9-4g-5Km" secondAttribute="trailing" id="tCL-UJ-w2F"/>
                             </constraints>
                         </view>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="fM2-lr-V8I" secondAttribute="bottom" id="C6N-1J-L8o"/>
-                        <constraint firstAttribute="trailing" secondItem="fM2-lr-V8I" secondAttribute="trailing" id="W8v-6p-i7F"/>
-                        <constraint firstItem="fM2-lr-V8I" firstAttribute="leading" secondItem="MTo-Ig-bBv" secondAttribute="leading" id="cXS-ky-Wx9"/>
-                        <constraint firstItem="UMf-lh-aZh" firstAttribute="top" secondItem="MTo-Ig-bBv" secondAttribute="top" id="pCA-tO-FLx"/>
-                        <constraint firstItem="UMf-lh-aZh" firstAttribute="leading" secondItem="MTo-Ig-bBv" secondAttribute="leading" id="q2R-gp-XKU"/>
-                        <constraint firstAttribute="trailing" secondItem="UMf-lh-aZh" secondAttribute="trailing" id="rIG-rM-zHo"/>
+                        <constraint firstItem="vtz-LK-Nip" firstAttribute="centerX" secondItem="NyR-SO-S5f" secondAttribute="centerX" id="GXO-Lz-Gx9"/>
+                        <constraint firstAttribute="bottom" secondItem="vtz-LK-Nip" secondAttribute="bottom" id="UZy-bf-tGS"/>
+                        <constraint firstItem="vtz-LK-Nip" firstAttribute="leading" secondItem="NyR-SO-S5f" secondAttribute="leading" id="afS-To-Ceg"/>
+                        <constraint firstAttribute="trailing" secondItem="vtz-LK-Nip" secondAttribute="trailing" id="gFz-Fg-w0B"/>
+                        <constraint firstItem="vtz-LK-Nip" firstAttribute="top" secondItem="NyR-SO-S5f" secondAttribute="top" id="sHx-ut-3CQ"/>
                     </constraints>
-                </stackView>
+                </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="AccentColor"/>
             <constraints>
-                <constraint firstItem="MTo-Ig-bBv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2It-Uc-qWm"/>
-                <constraint firstAttribute="bottom" secondItem="MTo-Ig-bBv" secondAttribute="bottom" id="Hj4-uB-wgd"/>
-                <constraint firstItem="MTo-Ig-bBv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Rve-Qx-D2f"/>
-                <constraint firstItem="MTo-Ig-bBv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SgC-oq-71L"/>
+                <constraint firstAttribute="bottom" secondItem="NyR-SO-S5f" secondAttribute="bottom" id="44f-s2-oyL"/>
+                <constraint firstItem="NyR-SO-S5f" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8ga-fo-06K"/>
+                <constraint firstItem="NyR-SO-S5f" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nRw-9N-WIr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NyR-SO-S5f" secondAttribute="trailing" id="pDV-4b-i7m"/>
             </constraints>
             <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
         </view>
@@ -69,9 +97,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

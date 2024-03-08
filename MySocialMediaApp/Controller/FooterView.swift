@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Combine
 
 @IBDesignable
 final class FooterView: UIView {
