@@ -39,7 +39,7 @@ class UsersViewController: UIViewController {
             switch result {
             case .success(let model):
                 print(model.results)
-                //users.append(contentsOf: model.results)
+                users.append(contentsOf: model.results)
                 //users. =
             case .failure(let error):
                 print(error)
@@ -79,12 +79,19 @@ class UsersViewController: UIViewController {
 
 extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RegistrationTableViewCell", for: indexPath) as! RegistrationTableViewCell
         
+        let username = (users[indexPath.row].title ?? "No") + " " + (users[indexPath.row].first ?? "No") + " " + (users[indexPath.row].last ?? "No")
+        let address = (users[indexPath.row].city ?? "No") + ", " + (users[indexPath.row].state ?? "No") + ", " + (users[indexPath.row].country ?? "No")
+        
+        cell.UsernameContentLabel.text = username
+        cell.UserAddressContentLabel.text = address
+        cell.UserPostCodeContentLabel.text = users[indexPath.row].postcode?.description
+        cell.UserEmailContentLabel.text = users[indexPath.row].email
         
         return cell
     }
