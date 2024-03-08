@@ -20,6 +20,7 @@ class UsersViewController: UIViewController {
     let apiClient = APIClient()
     var users = [UserDataModel]()
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,9 +30,9 @@ class UsersViewController: UIViewController {
         customLabels()
         customButtons()
         
-        
-        
     }
+    
+    // MARK: - Methods
     
     @IBAction func GetUserButtonTapped(_ sender: Any) {
         Task{
@@ -77,6 +78,7 @@ class UsersViewController: UIViewController {
 
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
 extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
@@ -94,6 +96,11 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
         cell.UserEmailContentLabel.text = users[indexPath.row].email
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let editRegistrationVC = EditRegistrationViewController()
+        self.navigationController?.pushViewController(editRegistrationVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

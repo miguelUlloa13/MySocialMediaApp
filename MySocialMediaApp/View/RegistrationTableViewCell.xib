@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +25,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="864-eF-H4T">
                                 <rect key="frame" x="0.0" y="0.0" width="455" height="100"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="9Jb-e2-p4L"/>
                                 </constraints>
@@ -65,7 +66,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <constraints>
                                                     <constraint firstItem="Vc1-FO-uAP" firstAttribute="leading" secondItem="gyu-Ko-2r9" secondAttribute="trailing" constant="2" id="LyN-wY-WbG"/>
                                                     <constraint firstAttribute="bottom" secondItem="gyu-Ko-2r9" secondAttribute="bottom" constant="5" id="QTs-6e-aQi"/>
@@ -99,7 +100,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <constraints>
                                                     <constraint firstItem="HJe-YD-o7t" firstAttribute="leading" secondItem="1kS-Tv-zgO" secondAttribute="leading" constant="5" id="7VI-rJ-jiw"/>
                                                     <constraint firstAttribute="trailing" secondItem="auK-2Z-EER" secondAttribute="trailing" id="WG9-XF-OkQ"/>
@@ -133,7 +134,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="iR0-aB-Zek" secondAttribute="trailing" id="Txs-uu-van"/>
                                                     <constraint firstItem="iR0-aB-Zek" firstAttribute="leading" secondItem="wyH-kf-nNO" secondAttribute="trailing" constant="2" id="V8e-7W-gAA"/>
@@ -167,7 +168,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="wgQ-ye-mBY" secondAttribute="bottom" id="DRo-zA-A5t"/>
                                                     <constraint firstAttribute="bottom" secondItem="Ly9-ew-a4E" secondAttribute="bottom" constant="5" id="Fs8-zt-cbh"/>
@@ -208,9 +209,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <color key="backgroundColor" name="AccentColor"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="QVu-Qi-LPA" secondAttribute="bottom" id="5oT-jy-kfG"/>
                                     <constraint firstAttribute="trailing" secondItem="QVu-Qi-LPA" secondAttribute="trailing" id="ASc-tF-b7w"/>
@@ -263,9 +265,9 @@
         <image name="building.2.crop.circle" catalog="system" width="128" height="123"/>
         <image name="envelope.circle" catalog="system" width="128" height="123"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="AccentColor">
+            <color red="0.99607843137254903" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
