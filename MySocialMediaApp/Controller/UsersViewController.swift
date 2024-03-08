@@ -17,7 +17,8 @@ class UsersViewController: UIViewController {
     @IBOutlet weak var UserRegistrationTableView: UITableView!
     
     // MARK: - Properties
-    
+    let apiClient = APIClient()
+    var users = [UserDataModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +28,26 @@ class UsersViewController: UIViewController {
         customTableView()
         customLabels()
         customButtons()
+        
+        
+        
     }
     
     @IBAction func GetUserButtonTapped(_ sender: Any) {
-
+        Task{
+            let result = await apiClient.getUser()
+            switch result {
+            case .success(let model):
+                print(model.results)
+                //users.append(contentsOf: model.results)
+                //users. =
+            case .failure(let error):
+                print(error)
+            }
+            self.UserRegistrationTableView.reloadData()
+        }
     }
-    
+
     private func customTableView() {
         UserRegistrationTableView.delegate = self
         UserRegistrationTableView.dataSource = self

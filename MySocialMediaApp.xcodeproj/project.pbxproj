@@ -26,6 +26,8 @@
 		78DB27632B9B61CB00B5373F /* RegistrationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DB27612B9B61CB00B5373F /* RegistrationTableViewCell.xib */; };
 		78DB276D2B9BA4EE00B5373F /* UserResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB276C2B9BA4EE00B5373F /* UserResponseModel.swift */; };
 		78DB276F2B9BA52C00B5373F /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB276E2B9BA52C00B5373F /* UserDataModel.swift */; };
+		78DB27712B9BA5E500B5373F /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27702B9BA5E500B5373F /* NetworkErrors.swift */; };
+		78DB27732B9BA61300B5373F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27722B9BA61300B5373F /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		78DB27612B9B61CB00B5373F /* RegistrationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegistrationTableViewCell.xib; sourceTree = "<group>"; };
 		78DB276C2B9BA4EE00B5373F /* UserResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseModel.swift; sourceTree = "<group>"; };
 		78DB276E2B9BA52C00B5373F /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		78DB27702B9BA5E500B5373F /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		78DB27722B9BA61300B5373F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				78DB276C2B9BA4EE00B5373F /* UserResponseModel.swift */,
 				78DB276E2B9BA52C00B5373F /* UserDataModel.swift */,
+				78DB27702B9BA5E500B5373F /* NetworkErrors.swift */,
+				78DB27722B9BA61300B5373F /* APIClient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,9 +225,11 @@
 				78DB27272B9A36DC00B5373F /* AppDelegate.swift in Sources */,
 				78DB27442B9A847000B5373F /* UsersViewController.swift in Sources */,
 				78DB27532B9AA68B00B5373F /* FooterView.swift in Sources */,
+				78DB27712B9BA5E500B5373F /* NetworkErrors.swift in Sources */,
 				78DB27292B9A36DC00B5373F /* SceneDelegate.swift in Sources */,
 				78DB27412B9A77DB00B5373F /* Extension.swift in Sources */,
 				78DB276D2B9BA4EE00B5373F /* UserResponseModel.swift in Sources */,
+				78DB27732B9BA61300B5373F /* APIClient.swift in Sources */,
 				78DB27622B9B61CB00B5373F /* RegistrationTableViewCell.swift in Sources */,
 				78DB276F2B9BA52C00B5373F /* UserDataModel.swift in Sources */,
 				78DB275F2B9ADCAB00B5373F /* HeaderView.swift in Sources */,
