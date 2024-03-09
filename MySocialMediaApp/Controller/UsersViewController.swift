@@ -7,12 +7,11 @@
 
 import UIKit
 
-class UsersViewController: UIViewController {
+class UsersViewController: UIViewController, DataManagerDelegate {
 
     @IBOutlet weak var InstructionsLabel: UILabel!
     
     @IBOutlet weak var GetUserButton: UIButton!
-    @IBOutlet weak var EditUserRegistrationButton: UIButton!
     
     @IBOutlet weak var UserRegistrationTableView: UITableView!
     
@@ -41,7 +40,7 @@ class UsersViewController: UIViewController {
             case .success(let model):
                 print(model.results)
                 users.append(contentsOf: model.results)
-                //users. =
+
             case .failure(let error):
                 print(error)
             }
@@ -69,11 +68,6 @@ class UsersViewController: UIViewController {
         GetUserButton.setTitleColor(.white, for: .normal)
         GetUserButton.titleLabel?.font = UIFont(name: UIFont.nameOf.Futura_Bold.rawValue, size: 18)
         
-        EditUserRegistrationButton.backgroundColor = .systemGray
-        EditUserRegistrationButton.setTitle("Edit registration", for: .normal)
-        EditUserRegistrationButton.setTitleColor(.label, for: .normal)
-        EditUserRegistrationButton.titleLabel?.font = UIFont(name: UIFont.nameOf.Futura_Bold.rawValue, size: 18)
-        
     }
 
 }
@@ -99,11 +93,20 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let editRegistrationVC = EditRegistrationViewController()
-        self.navigationController?.pushViewController(editRegistrationVC, animated: true)
+        let editRegistrationVC = EditRegistrationViewController(userDataModel: users[indexPath.row], indexPath: indexPath)
+        editRegistrationVC.delegate = self
+        // self.navigationController?.pushViewController(editRegistrationVC, animated: true)
+        self.present(editRegistrationVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300
+    }
+    
+    func dataDidUpdate(indexPath: IndexPath, newData: UserDataModel) {
+        
+        self.users[indexPath.row] = newData
+        self.UserRegistrationTableView.reloadData()
+
     }
 }

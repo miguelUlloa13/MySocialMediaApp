@@ -10,18 +10,18 @@ import Foundation
 struct UserDataModel: Decodable {
     
     // Name
-    let title: String?
-    let first: String?
-    let last: String?
+    var title: String?
+    var first: String?
+    var last: String?
     
     // Address
-    let city: String?
-    let state: String?
-    let country: String?
-    let postcode: Int?
+    var city: String?
+    var state: String?
+    var country: String?
+    var postcode: Int?
     
     // Email
-    let email: String?
+    var email: String?
     
     enum CodingKeys: String, CodingKey {
         

@@ -28,6 +28,7 @@
 		78DB276F2B9BA52C00B5373F /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB276E2B9BA52C00B5373F /* UserDataModel.swift */; };
 		78DB27712B9BA5E500B5373F /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27702B9BA5E500B5373F /* NetworkErrors.swift */; };
 		78DB27732B9BA61300B5373F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27722B9BA61300B5373F /* APIClient.swift */; };
+		78DB27752B9BF20800B5373F /* ValidateString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27742B9BF20800B5373F /* ValidateString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		78DB276E2B9BA52C00B5373F /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		78DB27702B9BA5E500B5373F /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		78DB27722B9BA61300B5373F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		78DB27742B9BF20800B5373F /* ValidateString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				78DB276E2B9BA52C00B5373F /* UserDataModel.swift */,
 				78DB27702B9BA5E500B5373F /* NetworkErrors.swift */,
 				78DB27722B9BA61300B5373F /* APIClient.swift */,
+				78DB27742B9BF20800B5373F /* ValidateString.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				78DB27482B9A85A600B5373F /* EditRegistrationViewController.swift in Sources */,
 				78DB27272B9A36DC00B5373F /* AppDelegate.swift in Sources */,
 				78DB27442B9A847000B5373F /* UsersViewController.swift in Sources */,
+				78DB27752B9BF20800B5373F /* ValidateString.swift in Sources */,
 				78DB27532B9AA68B00B5373F /* FooterView.swift in Sources */,
 				78DB27712B9BA5E500B5373F /* NetworkErrors.swift in Sources */,
 				78DB27292B9A36DC00B5373F /* SceneDelegate.swift in Sources */,
