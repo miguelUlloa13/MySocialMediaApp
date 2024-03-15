@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UsersViewController" customModule="MySocialMediaApp" customModuleProvider="target">
             <connections>
                 <outlet property="GetUserButton" destination="Wso-am-msD" id="4XQ-9H-P7k"/>
+                <outlet property="HeaderView" destination="kfh-u6-hyP" id="hiS-pe-Ihe"/>
                 <outlet property="InstructionsLabel" destination="o6m-Dx-EGD" id="Ktp-Vj-K3F"/>
                 <outlet property="UserRegistrationTableView" destination="EuP-Rq-qHM" id="1yb-S0-ZwL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

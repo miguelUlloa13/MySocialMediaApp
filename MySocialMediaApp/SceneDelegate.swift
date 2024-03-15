@@ -10,6 +10,15 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    
+    func setUpView(windowScene: UIWindowScene) {
+           window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+           let login2ViewController = LoginViewController()
+           let nav = UINavigationController(rootViewController: login2ViewController)
+           window?.windowScene = windowScene
+           window?.rootViewController = nav
+           window?.makeKeyAndVisible()
+    }
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -17,6 +26,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        setUpView(windowScene: windowScene)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -24,6 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+        logoutUser()
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
@@ -39,14 +51,45 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneWillEnterForeground(_ scene: UIScene) {
         // Called as the scene transitions from the background to the foreground.
         // Use this method to undo the changes made on entering the background.
+        checkForAutoLogout()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        UserDefaults.standard.set(Date(), forKey: "BackgroundTime")
+    }
+    
+
+
+    func checkForAutoLogout() {
+        
+        // guard let window = (scene as? UIWindowScene) else { return }
+        
+        guard let backgroundTime = UserDefaults.standard.object(forKey: "BackgroundTime") as? Date else {
+            return
+        }
+
+        let currentTime = Date()
+        let timeDifference = currentTime.timeIntervalSince(backgroundTime)
+        let minutesInBackground = timeDifference / 60
+
+        if minutesInBackground >= 0.5 {
+            // Perform logout
+            logoutUser()
+        }
     }
 
+    func logoutUser() {
+
+        let testViewController = LoginViewController()
+        let navc = UINavigationController(rootViewController: testViewController)
+        self.window?.windowScene?.keyWindow?.rootViewController = navc
+        self.window?.windowScene?.keyWindow?.makeKeyAndVisible()
+        KeychainHelper.eliminarCredenciales()
+         
+    }
 
 }
 

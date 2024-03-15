@@ -16,6 +16,8 @@ final class HeaderView: UIView {
     
     @IBOutlet weak var LogOutButton: UIButton!
     
+    var navBar = UINavigationController()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureView()
@@ -56,6 +58,19 @@ final class HeaderView: UIView {
         LogOutButton.setTitleColor(.white, for: .normal)
         LogOutButton.titleLabel?.font = UIFont(name: UIFont.nameOf.Futura_Bold.rawValue, size: 20)
         LogOutButton.round()
+        
     }
+    
+    private func closeSession(navigationViewController: UINavigationController) {
+        // navigationViewController.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func LogOutButtonTapped(_ sender: Any) {
+        
+        KeychainHelper.eliminarCredenciales()
+        navBar.popToRootViewController(animated: true)
+        
+    }
+    
     
 }

@@ -350,9 +350,12 @@ extension UIButton {
 
 }
 
-// MARK: - Extension String
-extension String {
-    
-
-
+// MARK: - Extension UIAlertController
+extension UIAlertController {
+    class func showAlert(_ title: String, _ message: String, from controller: UIViewController) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        controller.present(alertController, animated: true, completion: nil)
+    }
 }

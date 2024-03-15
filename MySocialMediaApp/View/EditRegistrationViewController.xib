@@ -15,9 +15,10 @@
                 <outlet property="CityTextField" destination="5Cp-4b-L7c" id="L8g-Wr-zDd"/>
                 <outlet property="CountryTextField" destination="61t-cU-crc" id="kTR-iH-tC7"/>
                 <outlet property="EmailTextField" destination="aBv-s4-pVS" id="PUF-Ie-dW1"/>
+                <outlet property="HeaderView" destination="ayD-4k-7Tk" id="Fkd-Xb-hxm"/>
                 <outlet property="InstructionsLabel" destination="ddX-dh-mot" id="Ogp-xg-w9U"/>
                 <outlet property="PostCodeTextField" destination="geV-Su-OAQ" id="udw-iv-U2d"/>
-                <outlet property="SaveChangesButton" destination="C9U-4L-YQX" id="ygB-PX-xuN"/>
+                <outlet property="SaveChangesButton" destination="C9U-4L-YQX" id="aY2-fp-1Og"/>
                 <outlet property="StateTextField" destination="3r7-lf-QJy" id="aQV-o2-gka"/>
                 <outlet property="UserAddressLabel" destination="kOl-Mh-VBL" id="Rc9-Fb-d7o"/>
                 <outlet property="UserEmailLabel" destination="913-Jm-ILj" id="mwn-cp-Nvj"/>
@@ -146,7 +147,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="bvn-Ua-bYQ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="913-Jm-ILj">
                                             <rect key="frame" x="0.0" y="650" width="393" height="30"/>
@@ -173,7 +174,7 @@
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
-                                                        <action selector="SaveChangesButtonTapped:" destination="-1" eventType="touchUpInside" id="zc4-QR-yF8"/>
+                                                        <action selector="SaveChangesButtonTapped:" destination="-1" eventType="touchUpInside" id="xKB-7c-ASf"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

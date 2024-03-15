@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45FE2579F3A07C6711844D8A /* Pods_MySocialMediaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C250F819886ACE850A26FB8D /* Pods_MySocialMediaApp.framework */; };
 		78DB27272B9A36DC00B5373F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27262B9A36DC00B5373F /* AppDelegate.swift */; };
 		78DB27292B9A36DC00B5373F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27282B9A36DC00B5373F /* SceneDelegate.swift */; };
-		78DB272E2B9A36DC00B5373F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 78DB272D2B9A36DC00B5373F /* Base */; };
 		78DB27302B9A36DE00B5373F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78DB272F2B9A36DE00B5373F /* Assets.xcassets */; };
 		78DB27332B9A36DE00B5373F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 78DB27322B9A36DE00B5373F /* Base */; };
-		78DB273F2B9A446000B5373F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB273E2B9A446000B5373F /* LoginViewController.swift */; };
 		78DB27412B9A77DB00B5373F /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27402B9A77DB00B5373F /* Extension.swift */; };
 		78DB27442B9A847000B5373F /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27422B9A847000B5373F /* UsersViewController.swift */; };
 		78DB27452B9A847000B5373F /* UsersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DB27432B9A847000B5373F /* UsersViewController.xib */; };
@@ -29,17 +28,24 @@
 		78DB27712B9BA5E500B5373F /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27702B9BA5E500B5373F /* NetworkErrors.swift */; };
 		78DB27732B9BA61300B5373F /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27722B9BA61300B5373F /* APIClient.swift */; };
 		78DB27752B9BF20800B5373F /* ValidateString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27742B9BF20800B5373F /* ValidateString.swift */; };
+		78DB27782B9C48D700B5373F /* MySocialMediaApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27762B9C48D700B5373F /* MySocialMediaApp.xcdatamodeld */; };
+		78DB277E2B9C4D7400B5373F /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB277D2B9C4D7400B5373F /* CoreDataHelper.swift */; };
+		78DB27812B9C5DCE00B5373F /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB277F2B9C5DCE00B5373F /* Users+CoreDataClass.swift */; };
+		78DB27822B9C5DCE00B5373F /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27802B9C5DCE00B5373F /* Users+CoreDataProperties.swift */; };
+		78DB27842B9D887300B5373F /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27832B9D887200B5373F /* KeychainHelper.swift */; };
+		78DB27862B9E0FD800B5373F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27852B9E0FD800B5373F /* SessionManager.swift */; };
+		78DB278D2BA493F200B5373F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB278B2BA493F200B5373F /* LoginViewController.swift */; };
+		78DB278E2BA493F200B5373F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DB278C2BA493F200B5373F /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C161BE3436589368BBDDA80 /* Pods-MySocialMediaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySocialMediaApp.release.xcconfig"; path = "Target Support Files/Pods-MySocialMediaApp/Pods-MySocialMediaApp.release.xcconfig"; sourceTree = "<group>"; };
 		78DB27232B9A36DC00B5373F /* MySocialMediaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySocialMediaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78DB27262B9A36DC00B5373F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78DB27282B9A36DC00B5373F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		78DB272D2B9A36DC00B5373F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78DB272F2B9A36DE00B5373F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78DB27322B9A36DE00B5373F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78DB27342B9A36DE00B5373F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78DB273E2B9A446000B5373F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		78DB27402B9A77DB00B5373F /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		78DB27422B9A847000B5373F /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		78DB27432B9A847000B5373F /* UsersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersViewController.xib; sourceTree = "<group>"; };
@@ -56,6 +62,16 @@
 		78DB27702B9BA5E500B5373F /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		78DB27722B9BA61300B5373F /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		78DB27742B9BF20800B5373F /* ValidateString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateString.swift; sourceTree = "<group>"; };
+		78DB27772B9C48D700B5373F /* MySocialMediaApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MySocialMediaApp.xcdatamodel; sourceTree = "<group>"; };
+		78DB277D2B9C4D7400B5373F /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		78DB277F2B9C5DCE00B5373F /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
+		78DB27802B9C5DCE00B5373F /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		78DB27832B9D887200B5373F /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		78DB27852B9E0FD800B5373F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		78DB278B2BA493F200B5373F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		78DB278C2BA493F200B5373F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C250F819886ACE850A26FB8D /* Pods_MySocialMediaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySocialMediaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7234FB073B9304AF4701E55 /* Pods-MySocialMediaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySocialMediaApp.debug.xcconfig"; path = "Target Support Files/Pods-MySocialMediaApp/Pods-MySocialMediaApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,17 +79,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45FE2579F3A07C6711844D8A /* Pods_MySocialMediaApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C5BF22AE6039A29842AB06A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C250F819886ACE850A26FB8D /* Pods_MySocialMediaApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		78DB271A2B9A36DC00B5373F = {
 			isa = PBXGroup;
 			children = (
+				78DB277F2B9C5DCE00B5373F /* Users+CoreDataClass.swift */,
+				78DB27802B9C5DCE00B5373F /* Users+CoreDataProperties.swift */,
 				78DB27252B9A36DC00B5373F /* MySocialMediaApp */,
 				78DB27242B9A36DC00B5373F /* Products */,
+				DD10A263E34ED745A080C577 /* Pods */,
+				1C5BF22AE6039A29842AB06A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +125,7 @@
 				78DB273A2B9A43A200B5373F /* Model */,
 				78DB272F2B9A36DE00B5373F /* Assets.xcassets */,
 				78DB27342B9A36DE00B5373F /* Info.plist */,
+				78DB27762B9C48D700B5373F /* MySocialMediaApp.xcdatamodeld */,
 			);
 			path = MySocialMediaApp;
 			sourceTree = "<group>";
@@ -108,6 +138,9 @@
 				78DB27702B9BA5E500B5373F /* NetworkErrors.swift */,
 				78DB27722B9BA61300B5373F /* APIClient.swift */,
 				78DB27742B9BF20800B5373F /* ValidateString.swift */,
+				78DB277D2B9C4D7400B5373F /* CoreDataHelper.swift */,
+				78DB27832B9D887200B5373F /* KeychainHelper.swift */,
+				78DB27852B9E0FD800B5373F /* SessionManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				78DB27312B9A36DE00B5373F /* LaunchScreen.storyboard */,
-				78DB272C2B9A36DC00B5373F /* Main.storyboard */,
+				78DB278C2BA493F200B5373F /* LoginViewController.xib */,
 				78DB27432B9A847000B5373F /* UsersViewController.xib */,
 				78DB27472B9A85A600B5373F /* EditRegistrationViewController.xib */,
 				78DB27612B9B61CB00B5373F /* RegistrationTableViewCell.xib */,
@@ -129,7 +162,7 @@
 		78DB273C2B9A43B100B5373F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				78DB273E2B9A446000B5373F /* LoginViewController.swift */,
+				78DB278B2BA493F200B5373F /* LoginViewController.swift */,
 				78DB27422B9A847000B5373F /* UsersViewController.swift */,
 				78DB27462B9A85A600B5373F /* EditRegistrationViewController.swift */,
 				78DB27602B9B61CB00B5373F /* RegistrationTableViewCell.swift */,
@@ -147,6 +180,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		DD10A263E34ED745A080C577 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7234FB073B9304AF4701E55 /* Pods-MySocialMediaApp.debug.xcconfig */,
+				2C161BE3436589368BBDDA80 /* Pods-MySocialMediaApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78DB27372B9A36DE00B5373F /* Build configuration list for PBXNativeTarget "MySocialMediaApp" */;
 			buildPhases = (
+				C6022BE0201005ADB84D24AD /* [CP] Check Pods Manifest.lock */,
 				78DB271F2B9A36DC00B5373F /* Sources */,
 				78DB27202B9A36DC00B5373F /* Frameworks */,
 				78DB27212B9A36DC00B5373F /* Resources */,
+				0767E7FD5985004B8A638BC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -211,22 +255,64 @@
 				78DB27452B9A847000B5373F /* UsersViewController.xib in Resources */,
 				78DB27632B9B61CB00B5373F /* RegistrationTableViewCell.xib in Resources */,
 				78DB27332B9A36DE00B5373F /* Base in Resources */,
-				78DB272E2B9A36DC00B5373F /* Base in Resources */,
+				78DB278E2BA493F200B5373F /* LoginViewController.xib in Resources */,
 				78DB275B2B9AD75800B5373F /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0767E7FD5985004B8A638BC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySocialMediaApp/Pods-MySocialMediaApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MySocialMediaApp/Pods-MySocialMediaApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MySocialMediaApp/Pods-MySocialMediaApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6022BE0201005ADB84D24AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MySocialMediaApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		78DB271F2B9A36DC00B5373F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78DB273F2B9A446000B5373F /* LoginViewController.swift in Sources */,
 				78DB27482B9A85A600B5373F /* EditRegistrationViewController.swift in Sources */,
 				78DB27272B9A36DC00B5373F /* AppDelegate.swift in Sources */,
 				78DB27442B9A847000B5373F /* UsersViewController.swift in Sources */,
+				78DB277E2B9C4D7400B5373F /* CoreDataHelper.swift in Sources */,
 				78DB27752B9BF20800B5373F /* ValidateString.swift in Sources */,
 				78DB27532B9AA68B00B5373F /* FooterView.swift in Sources */,
 				78DB27712B9BA5E500B5373F /* NetworkErrors.swift in Sources */,
@@ -236,21 +322,19 @@
 				78DB27732B9BA61300B5373F /* APIClient.swift in Sources */,
 				78DB27622B9B61CB00B5373F /* RegistrationTableViewCell.swift in Sources */,
 				78DB276F2B9BA52C00B5373F /* UserDataModel.swift in Sources */,
+				78DB27782B9C48D700B5373F /* MySocialMediaApp.xcdatamodeld in Sources */,
 				78DB275F2B9ADCAB00B5373F /* HeaderView.swift in Sources */,
+				78DB278D2BA493F200B5373F /* LoginViewController.swift in Sources */,
+				78DB27812B9C5DCE00B5373F /* Users+CoreDataClass.swift in Sources */,
+				78DB27842B9D887300B5373F /* KeychainHelper.swift in Sources */,
+				78DB27862B9E0FD800B5373F /* SessionManager.swift in Sources */,
+				78DB27822B9C5DCE00B5373F /* Users+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		78DB272C2B9A36DC00B5373F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				78DB272D2B9A36DC00B5373F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		78DB27312B9A36DE00B5373F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -299,7 +383,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -362,7 +446,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -383,6 +467,7 @@
 		};
 		78DB27382B9A36DE00B5373F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7234FB073B9304AF4701E55 /* Pods-MySocialMediaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -392,7 +477,6 @@
 				INFOPLIST_FILE = MySocialMediaApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -411,6 +495,7 @@
 		};
 		78DB27392B9A36DE00B5373F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C161BE3436589368BBDDA80 /* Pods-MySocialMediaApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -420,7 +505,6 @@
 				INFOPLIST_FILE = MySocialMediaApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -459,6 +543,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		78DB27762B9C48D700B5373F /* MySocialMediaApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				78DB27772B9C48D700B5373F /* MySocialMediaApp.xcdatamodel */,
+			);
+			currentVersion = 78DB27772B9C48D700B5373F /* MySocialMediaApp.xcdatamodel */;
+			name = MySocialMediaApp.xcdatamodeld;
+			path = "/Users/miguelulloa/Desktop/My Projects/MySocialMediaApp/MySocialMediaApp/MySocialMediaApp.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 78DB271B2B9A36DC00B5373F /* Project object */;
 }

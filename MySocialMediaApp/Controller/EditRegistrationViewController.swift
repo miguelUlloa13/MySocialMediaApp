@@ -30,8 +30,11 @@ class EditRegistrationViewController: UIViewController {
     
     @IBOutlet weak var SaveChangesButton: UIButton!
     
+    @IBOutlet weak var HeaderView: HeaderView!
+    
+    
     // MARK: - Properties
-    var userDataModel: UserDataModel
+    var userEdit: Users
     var indexPath: IndexPath
     weak var delegate: DataManagerDelegate?
     var validateString = ValidateString()
@@ -40,8 +43,8 @@ class EditRegistrationViewController: UIViewController {
 
     
     // MARK: - Constructor
-    init(userDataModel: UserDataModel, indexPath: IndexPath) {
-        self.userDataModel = userDataModel
+    init(userEdit: Users, indexPath: IndexPath) {
+        self.userEdit = userEdit
         self.indexPath = indexPath
         super.init(nibName: nil, bundle: nil)
     }
@@ -55,6 +58,7 @@ class EditRegistrationViewController: UIViewController {
         super.viewDidLoad()
 
         self.title = "Edit Registration"
+        self.HeaderView.navBar = self.navigationController!
         customLabels()
         customButton()
         customTextFields()
@@ -98,136 +102,136 @@ class EditRegistrationViewController: UIViewController {
         
         let myFont = UIFont(name: "Futura", size: 15)
         
-        UserTitleTextField.text = userDataModel.title
+        UserTitleTextField.text = userEdit.title
         UserTitleTextField.font = myFont
         UserTitleTextField.textAlignment = .center
         UserTitleTextField.keyboardType = .default
         
-        UserFirstTextField.text = userDataModel.first
+        UserFirstTextField.text = userEdit.first
         UserFirstTextField.font = myFont
         UserFirstTextField.textAlignment = .center
         UserFirstTextField.keyboardType = .default
         
-        UserLastTextField.text = userDataModel.last
+        UserLastTextField.text = userEdit.last
         UserLastTextField.font = myFont
         UserLastTextField.textAlignment = .center
         UserLastTextField.keyboardType = .default
 
-        CityTextField.text = userDataModel.city
+        CityTextField.text = userEdit.city
         CityTextField.font = myFont
         CityTextField.textAlignment = .center
         CityTextField.keyboardType = .default
         
-        StateTextField.text = userDataModel.state
+        StateTextField.text = userEdit.state
         StateTextField.font = myFont
         StateTextField.textAlignment = .center
         StateTextField.keyboardType = .default
         
-        CountryTextField.text = userDataModel.country
+        CountryTextField.text = userEdit.country
         CountryTextField.font = myFont
         CountryTextField.textAlignment = .center
         CountryTextField.keyboardType = .default
         
-        PostCodeTextField.text = userDataModel.postcode?.description
+        PostCodeTextField.text = userEdit.postcode.description
         PostCodeTextField.font = myFont
         PostCodeTextField.textAlignment = .center
         PostCodeTextField.keyboardType = .numbersAndPunctuation
         
-        EmailTextField.text = userDataModel.email
+        EmailTextField.text = userEdit.email
         EmailTextField.font = myFont
         EmailTextField.textAlignment = .center
         EmailTextField.keyboardType = .emailAddress
     }
     
-    func showAlert(message: String) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
-    }
+    func validateTextField(_ textField: UITextField) -> Bool {
+        guard let texto = textField.text, !texto.isEmpty else {
+            // El campo de texto está vacío
+            return false
+        }
+        // Puedes agregar más lógica de validación aquí según tus requisitos
     
-
-    private func checkTextField(textField: UITextField) {
-        
         switch textField {
-            
         case EmailTextField:
-            if !validateString.isValidEmail(EmailTextField.text!){
-                EmailTextField.backgroundColor = .red
-                showAlert(message: "The current field must be an email proper formatting.")
-                EmailTextField.resignFirstResponder()
-            } else {
+            if ValidateString().isValidEmail(EmailTextField.text!) {
                 EmailTextField.backgroundColor = .green
-                self.EmailTextField.resignFirstResponder()
-                userDataModel.email = EmailTextField.text!
+                return true
+            } else {
+                EmailTextField.backgroundColor = .red
+                UIAlertController.showAlert("Error", "The current field must be an email proper formatting.", from: self)
+                return false
             }
             
         case PostCodeTextField:
-            if !validateString.containsOnlyNumbers(numberString: PostCodeTextField.text!) {
-                PostCodeTextField.backgroundColor = .red
-                showAlert(message: "The current field must not contain spaces or letters, only numbers.")
-                PostCodeTextField.resignFirstResponder()
-            } else {
+            if ValidateString().containsOnlyNumbers(numberString: PostCodeTextField.text!) {
                 PostCodeTextField.backgroundColor = .green
-                self.PostCodeTextField.resignFirstResponder()
-                userDataModel.postcode = Int(PostCodeTextField.text!)
-            }
-            
-        default:
-            if !validateString.containsOnlyLetters(letterString: textField.text!) {
-                textField.backgroundColor = .red
-                showAlert(message: "The current field must not contain spaces or numbers, only letters.")
-                textField.resignFirstResponder()
+                return true
             } else {
+                PostCodeTextField.backgroundColor = .red
+                UIAlertController.showAlert("Error", "The current field must not contain spaces or letters, only numbers.", from: self)
+                return false
+            }
+        default:
+            if ValidateString().containsOnlyLetters(letterString: textField.text!) {
                 textField.backgroundColor = .green
-                textField.resignFirstResponder()
-                userDataModel.title = UserTitleTextField.text
-                userDataModel.first = UserFirstTextField.text
-                userDataModel.last = UserLastTextField.text
-                userDataModel.city = CityTextField.text
-                userDataModel.state = StateTextField.text
-                userDataModel.country = CountryTextField.text
-                userDataModel.email = EmailTextField.text
+                return true
+            } else {
+                textField.backgroundColor = .red
+                UIAlertController.showAlert("Error", "The current field must not contain spaces or numbers, only letters.", from: self)
+                return false
             }
         }
     }
+
+
     
     
     @IBAction func SaveChangesButtonTapped(_ sender: UIButton) {
         
-        if UserTitleTextField.backgroundColor != .red &&
-            UserFirstTextField.backgroundColor != .red &&
-            UserLastTextField.backgroundColor != .red &&
-            CityTextField.backgroundColor != .red &&
-            StateTextField.backgroundColor != .red &&
-            CountryTextField.backgroundColor != .red &&
-            EmailTextField.backgroundColor != .red &&
-            PostCodeTextField.backgroundColor != .red {
+        if  validateTextField(UserTitleTextField) &&
+            validateTextField(UserFirstTextField) &&
+            validateTextField(UserLastTextField) &&
+            validateTextField(CityTextField) &&
+            validateTextField(StateTextField) &&
+            validateTextField(CountryTextField) &&
+            validateTextField(PostCodeTextField) &&
+            validateTextField(EmailTextField) {
             
-            delegate?.dataDidUpdate(indexPath: indexPath, newData: userDataModel)
-            dismiss(animated: true)
+            // All fields are valid and saved
+            print("All fields are valid")
+            userEdit.email = EmailTextField.text!
+            userEdit.postcode = Int64(PostCodeTextField.text!)!
+            userEdit.title = UserTitleTextField.text
+            userEdit.first = UserFirstTextField.text
+            userEdit.last = UserLastTextField.text
+            userEdit.city = CityTextField.text
+            userEdit.state = StateTextField.text
+            userEdit.country = CountryTextField.text
+            
+            
+            delegate?.dataDidUpdate(indexPath: indexPath, userEdit: userEdit)
+            self.navigationController?.popViewController(animated: true)
+            
+        } else {
+            print("At least one of the fields is invalid")
         }
-        
-        else {
-            showAlert(message: "Some fields were not filled out correctly.")
-        }
-        
     }
-    
 }
+    
+
 
 // MARK: - UITextFieldDelegate
 extension EditRegistrationViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        checkTextField(textField: textField)
-        return true
+        self.view.endEditing(true)
+        return false
     }
+
 
 }
 
 protocol DataManagerDelegate: AnyObject {
-    func dataDidUpdate(indexPath: IndexPath, newData: UserDataModel)
+    func dataDidUpdate(indexPath: IndexPath, userEdit: Users)
 }
 
 
