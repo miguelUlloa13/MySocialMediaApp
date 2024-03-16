@@ -45,7 +45,7 @@ final class FooterView: UIView {
         self.addSubview(view)
     }
     
-    @objc func updateTime() {
+    @objc private func updateTime() {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy HH:mm:ss"

@@ -31,13 +31,23 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Log In"
+
+
+        customNavigationBar()
         customLabels()
         customButtons()
         customTextFields()
         verifyCredentials()
     }
     
+
     // MARK: - Methods
+    
+    private func customNavigationBar() {
+        navigationController?.navigationBar.barTintColor = UIColor.systemGreen  // customNavigation bar backgrouncolor
+        navigationController?.navigationBar.barStyle = UIBarStyle.black
+        navigationController?.navigationBar.tintColor = UIColor.link
+    }
     
     private func customLabels() {
         LogInToMySocialMediaLabelApp.text = "Log in to MySocialMediaApp"
@@ -73,42 +83,56 @@ class LoginViewController: UIViewController {
         PasswordTextField.font = UIFont(name: UIFont.nameOf.Futura_Medium.rawValue, size: 20)
     }
     
-
-
-    private func cleanTextFields() {
-        UsernameTextField.text = ""
-        PasswordTextField.text = ""
-    }
     
+    /// Check if a session exists
     private func verifyCredentials() {
-        // Verificar credenciales al iniciar sesión
-        if let (_, _) = KeychainHelper.recuperarCredenciales() {
-            print("Inicio de sesión exitoso")
-            // Continuar con la lógica de la aplicación
+        
+        if let (_, _) = KeychainHelper.recoverCredentials() {
+            print("Successful login")
+            // A session exists
             let usersVC = UsersViewController()
             self.navigationController?.pushViewController(usersVC, animated: false)
         } else {
-            print("No se encontraron credenciales")
-            // Mostrar un mensaje de error al usuario
+            print("No credentials found")
         }
 
     }
     
-    
-    @IBAction func LoginButtonTapped(_ sender: UIButton) {
+    /// Action to perform after pressing Login button
+    /// - Parameter sender: UIButton
+    @IBAction private func LoginButtonTapped(_ sender: UIButton) {
+        guard let username = UsernameTextField.text,
+              let password = PasswordTextField.text else {
+            return
+        }
+
         
-        if (UsernameTextField.text == "Administrador") && (PasswordTextField.text == "Admin123") {
-            
-            KeychainHelper.guardarCredenciales(username: UsernameTextField.text!, password: PasswordTextField.text!)
+        if validateCredentials(username: username, password: password) {
+            // Successful login
+            print("Login exitoso")
+            // Transition to UserViewcontroller and credentials are saved
+            KeychainHelper.saveCredentials(username: username, password: password)
             let usersVC = UsersViewController()
-            cleanTextFields()
             self.navigationController?.pushViewController(usersVC, animated: true)
-            
+
         } else {
-            cleanTextFields()
-            UIAlertController.showAlert("Error", "Log in", from: self)
+            // Login failed
+            print("Login failed")
+            UIAlertController.showAlert("Error", "Access error", from: self)
         }
     }
+    
+    
+    /// Validate user credentials
+    /// - Parameters:
+    ///   - username: Usarname to validate
+    ///   - password: Password to validate
+    /// - Returns: True if the user credentials are correct
+    private func validateCredentials(username: String, password: String) -> Bool {
+        return username == "Administrador" && password == "Admin123"
+    }
+
+    
 }
 
 // MARK: - UITextFieldDelegate

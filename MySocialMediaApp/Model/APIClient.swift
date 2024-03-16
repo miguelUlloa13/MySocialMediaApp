@@ -7,7 +7,7 @@
 
 import Foundation
 
-// Class to make the connection to the API.
+/// Class to make the connection to the API.
 final class APIClient {
     
     // MARK: Properties

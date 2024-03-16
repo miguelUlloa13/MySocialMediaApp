@@ -9,34 +9,35 @@ import Foundation
 import CoreData
 import UIKit
 
+/// Helper class to save user registration in persistently store the objects of the application
 class CoreDataHelper {
     
-    static var userArray: [Users]?
-    
-    // Obtener el contexto de Core Data
+    static var userArray: [Users]?  // Array to save users
+
+    /// Gets Core Data context
     static let managedContext: NSManagedObjectContext = {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            fatalError("No se pudo obtener el delegate de la aplicación")
+            fatalError("Could not get application delegate")
         }
         return appDelegate.persistentContainer.viewContext
     }()
     
-    // Método para recuperar un arreglo de nombres desde Core Data
-    static func recuperarArregloDesdeCoreData() {
+    /// Retrieves an array of names from Core Data
+    static func retrieveArrayFromCoreData() {
         
         do {
             
             userArray = try managedContext.fetch(Users.fetchRequest())
-            // let users = try managedContext.fetch(Users.fetchRequest())
-            // return users
+
         } catch {
-            print("Error al recuperar los items de Core Data: \(error)")
-            // return []
+            print("Error retrieving Core Data items: \(error)")
+
         }
     }
     
-    // Método para guardar un arreglo de nombres en Core Data
-    static func guardarArregloEnCoreData(_ user: [UserDataModel]) {
+    /// Saves an array of names in Core Data
+    /// - Parameter user: User data
+    static func saveArrayInCoreData(_ user: [UserDataModel]) {
         
         for field in user {
             let newUser = Users(context: managedContext)
@@ -55,11 +56,11 @@ class CoreDataHelper {
             try managedContext.save()
             print("Item guardado en Core Data: \(user)")
         } catch {
-            print("Error al guardar el item en Core Data: \(error)")
+            print("Error when saving item in Core Data: \(error)")
         }
         
-        // Guardar el nuevo item en Core Data
-        self.recuperarArregloDesdeCoreData()
+        // Save the new item in Core Data
+        self.retrieveArrayFromCoreData()
         
     }
     

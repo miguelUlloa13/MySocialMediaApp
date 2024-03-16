@@ -33,7 +33,6 @@
 		78DB27812B9C5DCE00B5373F /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB277F2B9C5DCE00B5373F /* Users+CoreDataClass.swift */; };
 		78DB27822B9C5DCE00B5373F /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27802B9C5DCE00B5373F /* Users+CoreDataProperties.swift */; };
 		78DB27842B9D887300B5373F /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27832B9D887200B5373F /* KeychainHelper.swift */; };
-		78DB27862B9E0FD800B5373F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB27852B9E0FD800B5373F /* SessionManager.swift */; };
 		78DB278D2BA493F200B5373F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DB278B2BA493F200B5373F /* LoginViewController.swift */; };
 		78DB278E2BA493F200B5373F /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78DB278C2BA493F200B5373F /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
@@ -67,7 +66,6 @@
 		78DB277F2B9C5DCE00B5373F /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
 		78DB27802B9C5DCE00B5373F /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		78DB27832B9D887200B5373F /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
-		78DB27852B9E0FD800B5373F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		78DB278B2BA493F200B5373F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		78DB278C2BA493F200B5373F /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		C250F819886ACE850A26FB8D /* Pods_MySocialMediaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySocialMediaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,7 +138,6 @@
 				78DB27742B9BF20800B5373F /* ValidateString.swift */,
 				78DB277D2B9C4D7400B5373F /* CoreDataHelper.swift */,
 				78DB27832B9D887200B5373F /* KeychainHelper.swift */,
-				78DB27852B9E0FD800B5373F /* SessionManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,7 +324,6 @@
 				78DB278D2BA493F200B5373F /* LoginViewController.swift in Sources */,
 				78DB27812B9C5DCE00B5373F /* Users+CoreDataClass.swift in Sources */,
 				78DB27842B9D887300B5373F /* KeychainHelper.swift in Sources */,
-				78DB27862B9E0FD800B5373F /* SessionManager.swift in Sources */,
 				78DB27822B9C5DCE00B5373F /* Users+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

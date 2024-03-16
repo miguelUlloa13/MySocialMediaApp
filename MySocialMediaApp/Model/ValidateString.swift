@@ -7,31 +7,26 @@
 
 import Foundation
 
+/// Class to validate Strings
 class ValidateString {
-    // Metodo para validar un email
+    
+    /// Validate an email
+    /// - Parameter email: Email to validate
+    /// - Returns: True if the email complies with the format
     func isValidEmail(_ email: String) -> Bool {
-        let usrName = "[A-Z0-9a-z._%+-]"    // Exprecion regular del nombre de usuario
-        let provider = "[A-Za-z0-9.-]"      // Exprecion regular del proveedor del correo
-        let domain = "[A-Za-z]"             // Tipo de dominio
-        let emailRegEx = usrName + "+@" + provider + "+\\." +  domain + "{2,64}"    // Exprecion regular completa
+        let usrName = "[A-Z0-9a-z._%+-]"    // Username Regular Expression
+        let provider = "[A-Za-z0-9.-]"      // Mail Provider Regular Expression
+        let domain = "[A-Za-z]"             // Domain type
+        let emailRegEx = usrName + "+@" + provider + "+\\." +  domain + "{2,64}"    // Regular Expression complete
         
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         let result = emailPred.evaluate(with: email)
         return result
     }
-
-    // Metodo para validar el password
-        // Longitud de 6 a 16 caracteres
-        // Permite ingresar el alfabeto
-        // Es necesario un caracter especial
-    func isValidPassword(password: String) -> Bool {
-        let passwordRegEx = "^(?=.*[a-z])(?=.*[$@$#+!%*?&])[A-Za-z\\d$@$#!+%*?&]{6,16}"
-        
-        let passwordPred = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
-        let result = passwordPred.evaluate(with: password)
-        return result
-    }
     
+    /// Validates if the string contains letters
+    /// - Parameter letterString: String to validate
+    /// - Returns: True if the string contains only letters
     func containsOnlyLetters(letterString: String) -> Bool {
         let onlyLettersRegEx = "^[a-zA-Z]+$"
         let onlyLettersPred = NSPredicate(format:"SELF MATCHES %@", onlyLettersRegEx)
@@ -40,6 +35,9 @@ class ValidateString {
         return result
     }
     
+    /// Validates if the string contains numbers
+    /// - Parameter numberString: String to validate
+    /// - Returns: True if the string contains only numbers
     func containsOnlyNumbers(numberString: String) -> Bool {
         let onlyNumbersRegEx = "^[0-9]+$"
         let onlyNumbersPred = NSPredicate(format:"SELF MATCHES %@", onlyNumbersRegEx)

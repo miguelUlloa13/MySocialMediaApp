@@ -10,14 +10,15 @@ import UIKit
 // @IBDesignable
 final class HeaderView: UIView {
 
-    // MARK: - Properties
     @IBOutlet weak var AppNameLabel: UILabel!
     @IBOutlet weak var UsernameLabel: UILabel!
     
     @IBOutlet weak var LogOutButton: UIButton!
     
+    // MARK: - Properties
     var navBar = UINavigationController()
     
+    // MARK: - Lyfe cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureView()
@@ -61,13 +62,9 @@ final class HeaderView: UIView {
         
     }
     
-    private func closeSession(navigationViewController: UINavigationController) {
-        // navigationViewController.popToRootViewController(animated: true)
-    }
-    
     @IBAction func LogOutButtonTapped(_ sender: Any) {
         
-        KeychainHelper.eliminarCredenciales()
+        KeychainHelper.deleteCredentials()
         navBar.popToRootViewController(animated: true)
         
     }

@@ -9,6 +9,8 @@ import UIKit
 
 class RegistrationTableViewCell: UITableViewCell {
     
+    // MARK: - Outlets
+        // Labels
     @IBOutlet weak var UsernameLabel: UILabel!
     @IBOutlet weak var UserAddressLabel: UILabel!
     @IBOutlet weak var UserPostCodeLabel: UILabel!
@@ -19,6 +21,7 @@ class RegistrationTableViewCell: UITableViewCell {
     @IBOutlet weak var UserPostCodeContentLabel: UILabel!
     @IBOutlet weak var UserEmailContentLabel: UILabel!
     
+    @IBOutlet weak var UserCounterLabel: UILabel!
     
 
     override func awakeFromNib() {
@@ -42,6 +45,8 @@ class RegistrationTableViewCell: UITableViewCell {
         UserEmailLabel.text = "Email:"
         UserEmailLabel.myCustomFont(size: 18, textColor: .label, textAlignment: .left)
         UserEmailContentLabel.myCustomFont(size: 18, textColor: .label, textAlignment: .left)
+        
+        UserCounterLabel.myCustomFont(size: 25, textColor: .label)
         
     }
 

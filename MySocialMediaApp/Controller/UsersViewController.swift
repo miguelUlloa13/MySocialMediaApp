@@ -9,18 +9,24 @@ import UIKit
 
 class UsersViewController: UIViewController, DataManagerDelegate {
     
-    @IBOutlet weak var HeaderView: HeaderView!
+    // MARK: - Outlets
+        // Views
+    @IBOutlet weak private var HeaderView: HeaderView!
     
-    @IBOutlet weak var InstructionsLabel: UILabel!
+        // Labels
+    @IBOutlet weak private var InstructionsLabel: UILabel!
     
-    @IBOutlet weak var GetUserButton: UIButton!
+        // Buttons
+    @IBOutlet weak private var GetUserButton: UIButton!
     
-    @IBOutlet weak var UserRegistrationTableView: UITableView!
+        // Table view
+    @IBOutlet weak private var UserRegistrationTableView: UITableView!
     
     // MARK: - Properties
-    let apiClient = APIClient()
-    var cDH = CoreDataHelper.self
+    private let apiClient = APIClient()     // Instace to api call
+    private var cDH = CoreDataHelper.self   // Save user in internal base
 
+    // MARK: - Constructor
     init() {
         super.init(nibName: nil, bundle: nil)
     }
@@ -41,23 +47,29 @@ class UsersViewController: UIViewController, DataManagerDelegate {
         customTableView()
         customLabels()
         customButtons()
-        cDH.recuperarArregloDesdeCoreData()
+        cDH.retrieveArrayFromCoreData()
         UserRegistrationTableView.reloadData()
         
     }
-
     
-    @IBAction func GetUserButtonTapped(_ sender: Any) {
+    // MARK: - Methods
+
+    /// Action to perform after pressing GetUser button
+    /// - Parameter sender: UIButton
+    @IBAction private func GetUserButtonTapped(_ sender: UIButton) {
         Task{
             let result = await apiClient.getUser()
             switch result {
             case .success(let model):
+                // The user was obtained correctly
                 print(model.results)
-                cDH.guardarArregloEnCoreData(model.results)
+                cDH.saveArrayInCoreData(model.results)
 
             case .failure(let error):
+                // An error occurred while calling the api
                 print(error)
             }
+            // Update table view
             self.UserRegistrationTableView.reloadData()
         }
     }
@@ -89,10 +101,12 @@ class UsersViewController: UIViewController, DataManagerDelegate {
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // Numbers of rows
         return cDH.userArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Populate table view
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "RegistrationTableViewCell", for: indexPath) as! RegistrationTableViewCell
         
@@ -135,20 +149,25 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource {
             cell.UserEmailContentLabel.text = "No"
         }
         
+        cell.UserCounterLabel.text = "User: \(indexPath.row + 1)"
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Action to perform after pressing a cell
         let editRegistrationVC = EditRegistrationViewController(userEdit: cDH.userArray![indexPath.row], indexPath: indexPath)
         editRegistrationVC.delegate = self
         self.navigationController?.pushViewController(editRegistrationVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // Cell size
         return 300
     }
     
     func dataDidUpdate(indexPath: IndexPath, userEdit: Users) {
+        // Protocol to update the cell
         self.cDH.userArray?[indexPath.row] = userEdit
         do {
             try cDH.managedContext.save()

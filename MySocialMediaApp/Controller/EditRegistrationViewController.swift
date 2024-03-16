@@ -9,37 +9,43 @@ import UIKit
 
 class EditRegistrationViewController: UIViewController {
     
-    @IBOutlet weak var InstructionsLabel: UILabel!
-    @IBOutlet weak var UsernameLabel: UILabel!
-    @IBOutlet weak var UserAddressLabel: UILabel!
-    @IBOutlet weak var UserPostCodeLabel: UILabel!
-    @IBOutlet weak var UserEmailLabel: UILabel!
+    // MARK: - Outlets
+        // Labels
+    @IBOutlet weak private var InstructionsLabel: UILabel!
+    @IBOutlet weak private var UsernameLabel: UILabel!
+    @IBOutlet weak private var UserAddressLabel: UILabel!
+    @IBOutlet weak private var UserPostCodeLabel: UILabel!
+    @IBOutlet weak private var UserEmailLabel: UILabel!
+    @IBOutlet weak var UserCounterLabel: UILabel!
     
     
-    @IBOutlet weak var UserTitleTextField: UITextField!
-    @IBOutlet weak var UserFirstTextField: UITextField!
-    @IBOutlet weak var UserLastTextField: UITextField!
+        // Text fields
+            // Name
+    @IBOutlet weak private var UserTitleTextField: UITextField!
+    @IBOutlet weak private var UserFirstTextField: UITextField!
+    @IBOutlet weak private var UserLastTextField: UITextField!
     
-    @IBOutlet weak var CityTextField: UITextField!
-    @IBOutlet weak var StateTextField: UITextField!
-    @IBOutlet weak var CountryTextField: UITextField!
+            // Address
+    @IBOutlet weak private var CityTextField: UITextField!
+    @IBOutlet weak private var StateTextField: UITextField!
+    @IBOutlet weak private var CountryTextField: UITextField!
+    @IBOutlet weak private var PostCodeTextField: UITextField!
     
-    @IBOutlet weak var PostCodeTextField: UITextField!
+            // Email
+    @IBOutlet weak private var EmailTextField: UITextField!
     
-    @IBOutlet weak var EmailTextField: UITextField!
+        // Buttons
+    @IBOutlet weak private var SaveChangesButton: UIButton!
     
-    @IBOutlet weak var SaveChangesButton: UIButton!
-    
-    @IBOutlet weak var HeaderView: HeaderView!
+        // Viiews
+    @IBOutlet weak private var HeaderView: HeaderView!
     
     
     // MARK: - Properties
-    var userEdit: Users
-    var indexPath: IndexPath
-    weak var delegate: DataManagerDelegate?
-    var validateString = ValidateString()
-    
-    let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
+    private var userEdit: Users             // Array to save updates
+    private var indexPath: IndexPath        // Number of user
+    weak var delegate: DataManagerDelegate? // Delegate
+    private var validateString = ValidateString()   // Intance to validate Strings
 
     
     // MARK: - Constructor
@@ -54,6 +60,7 @@ class EditRegistrationViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -65,6 +72,9 @@ class EditRegistrationViewController: UIViewController {
     }
     
     private func customLabels() {
+        UserCounterLabel.text = "User: \(indexPath.row + 1)"
+        UserCounterLabel.myCustomFont(size: 25, textColor: .label)
+        
         InstructionsLabel.text = "Edit"
         InstructionsLabel.myCustomFont(size: 25, textColor: .label)
         
@@ -143,12 +153,15 @@ class EditRegistrationViewController: UIViewController {
         EmailTextField.keyboardType = .emailAddress
     }
     
-    func validateTextField(_ textField: UITextField) -> Bool {
+    /// Validate the text fields
+    /// - Parameter textField: Textfield in view
+    /// - Returns: True if the textfield passed all requirements
+    private func validateTextField(_ textField: UITextField) -> Bool {
         guard let texto = textField.text, !texto.isEmpty else {
-            // El campo de texto está vacío
+            // The text field is empty.
             return false
         }
-        // Puedes agregar más lógica de validación aquí según tus requisitos
+        // validation logic
     
         switch textField {
         case EmailTextField:
@@ -185,7 +198,9 @@ class EditRegistrationViewController: UIViewController {
 
     
     
-    @IBAction func SaveChangesButtonTapped(_ sender: UIButton) {
+    /// Action to perform after pressing aveChanges button
+    /// - Parameter sender: UIButton
+    @IBAction private func SaveChangesButtonTapped(_ sender: UIButton) {
         
         if  validateTextField(UserTitleTextField) &&
             validateTextField(UserFirstTextField) &&
@@ -230,6 +245,7 @@ extension EditRegistrationViewController: UITextFieldDelegate {
 
 }
 
+/// Protocol to update the cell
 protocol DataManagerDelegate: AnyObject {
     func dataDidUpdate(indexPath: IndexPath, userEdit: Users)
 }

@@ -62,10 +62,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
 
-
+    
+    /// Checks the time of the application when putting it in the background
     func checkForAutoLogout() {
-        
-        // guard let window = (scene as? UIWindowScene) else { return }
         
         guard let backgroundTime = UserDefaults.standard.object(forKey: "BackgroundTime") as? Date else {
             return
@@ -75,19 +74,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let timeDifference = currentTime.timeIntervalSince(backgroundTime)
         let minutesInBackground = timeDifference / 60
 
-        if minutesInBackground >= 0.5 {
-            // Perform logout
+        if minutesInBackground >= 3 {
+            // Perform logout after 3 minutes
             logoutUser()
         }
     }
-
+    
+    /// Log out app
     func logoutUser() {
 
+        
         let testViewController = LoginViewController()
         let navc = UINavigationController(rootViewController: testViewController)
         self.window?.windowScene?.keyWindow?.rootViewController = navc
         self.window?.windowScene?.keyWindow?.makeKeyAndVisible()
-        KeychainHelper.eliminarCredenciales()
+        KeychainHelper.deleteCredentials()
          
     }
 

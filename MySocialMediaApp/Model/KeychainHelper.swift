@@ -11,13 +11,18 @@ import Security
 
 
 
+/// Helper class to save user credentials in the application
 class KeychainHelper {
     
-    static var serviceName = "TuAppName"
+    static var serviceName = "MySocialMediaApp"
     static let usernameKey = "Username"
     static let passwordKey = "Password"
     
-    static func guardarCredenciales(username: String, password: String) {
+    /// Saves user credentials
+    /// - Parameters:
+    ///   - username: Username
+    ///   - password: Password
+    static func saveCredentials(username: String, password: String) {
         
         guard let usernameData = username.data(using: .utf8),
                       let passwordData = password.data(using: .utf8) else {
@@ -53,7 +58,9 @@ class KeychainHelper {
         
     }
     
-    static func recuperarCredenciales() -> (String, String)? {
+    /// Recovers the credentials
+    /// - Returns: Username and password
+    static func recoverCredentials() -> (String, String)? {
         let usernameQuery: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
             kSecAttrService as String: serviceName,
@@ -85,7 +92,8 @@ class KeychainHelper {
         return (username, password)
     }
     
-    static func eliminarCredenciales() {
+    /// Deletes user credentials
+    static func deleteCredentials() {
         
         let usernameQuery: [String: Any] = [
                     kSecClass as String: kSecClassGenericPassword,
